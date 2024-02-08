@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="wrapper">
+    <section class="main">
+        <header class="header">
+            <h3 class="heading">TODO APP</h3>
+            <p>Manage all your task from one place</p>
+        </header>
+
+        <div class="">
+            <form method="post" class="form" onsubmit="return submitForm(event)" name="todo-form">
+                <div class="main-form">
+                    <div class="row">
+                        <div class="form-item">
+                            <input class="form-control" required type="text" name="title" placeholder="Enter your task ">
+                        </div>
+                        <div class="form-item">
+                            <select name="priority" required class="form-control" placeholder="Select your priority ">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-item" id="form-item-desc">
+                        <textarea class="form-control mt4" required name="description" placeholder="Enter your description " rows="4"></textarea>
+                    </div>
+                    <div>
+
+                        <button class="success" type="submit">Add</button>
+                    </div>
+                </div>
+            </form>
+
+            <div>
+                <ul class="ul-list" id="ul-list">
+                    <li class="todo">
+                        <div class="todo-item">
+                            <div>
+                                <h4>Hello</h4>
+                                <p>Description </p>
+                            </div>
+                            <div>
+                                <button class="button">Complete</button>
+                                <button class="button bg-red">Delete</button>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="main.js"></script>
+
+</html>
