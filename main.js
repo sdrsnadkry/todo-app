@@ -1,17 +1,20 @@
+//saves todo data to localstorage
 function setLocalStorageItem(todoArray) {
     localStorage.setItem("todoArray", JSON.stringify(todoArray));
 }
 
+
+//gets data from localStorage and parse json
 function getLocalStorageItem() {
     const todoArray = localStorage.getItem("todoArray");
     const parsedTodo = JSON.parse(todoArray);
     return parsedTodo;
 }
 
+
+//shows data from localStorage to the UI / HTML
 function mapTodoItem() {
     const arrays = getLocalStorageItem();
-
-    console.log(arrays);
 
     if (arrays) {
         arrays.forEach((item) => {
@@ -41,8 +44,6 @@ function mapTodoItem() {
     }
 }
 mapTodoItem();
-
-getLocalStorageItem();
 
 function submitForm(event) {
     event.preventDefault();
@@ -93,11 +94,14 @@ function submitForm(event) {
 
     let newArray = [];
 
+    //check if there is data in the storage
     if (arrays) {
         newArray = [...arrays, todoItem];
     } else {
+        // if there is no data in the storage save the first item
         newArray = [todoItem];
     }
 
+    //save
     setLocalStorageItem(newArray);
 }
