@@ -26,10 +26,16 @@ function mapTodoItem() {
 
             const liElement = `
             <div class="todo-item">
-                <div>
-                    <h4>${item.title}</h4>
-                    <p>${item.description} </p>
+                <div class="title-row">
+                    <div>
+                        <h4>${item.title}</h4>
+                        <p>${item.description} </p>
+                    </div>
+                
+                    <span class="priority">Hign</span>
+                
                 </div>
+
                 <div>
                     <button class="button">Complete</button>
                     <button class="button bg-red">Delete</button>

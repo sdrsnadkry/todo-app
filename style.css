@@ -133,3 +133,18 @@ h3 {
 .bg-red {
     background-color: red;
 }
+
+.title-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.priority {
+    margin-left: 20px;
+    background-color: red;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
